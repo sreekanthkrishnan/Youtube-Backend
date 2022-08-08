@@ -1,6 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+
+// importing routes
+import authRoute from "./routes/auth.js";
 import userRoute from "./routes/users.js";
 import videoRoute from "./routes/videos.js";
 import commentRoute from "./routes/comments.js";
@@ -21,6 +24,9 @@ const connect = () => {
         });
 };
 
+// ROUTES SETUP FUN
+app.use(express.json());
+app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/videos", videoRoute);
 app.use("/api/v1/comments", commentRoute);
