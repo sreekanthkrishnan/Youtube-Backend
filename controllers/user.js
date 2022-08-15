@@ -28,21 +28,21 @@ export const update = async (req, res, next) => {
         return next(createError(403, "Invaild access token"));
     }
 };
-export const deleteUser = (res, req, next) => {
-    return res.json("updated");
+export const deleteUser = (req, res, next) => {
+    return res.json(req.body);
 };
-export const getUser = (res, req, next) => {
-    return res.json("updated");
+export const getUser = (req, res, next) => {
+    return res.json();
 };
-export const subscribe = (res, req, next) => {
-    return res.json("updated");
+export const subscribe = (req, res, next) => {
+    return res.json();
 };
-export const unSubscribe = (res, req, next) => {
-    return res.json("updated");
+export const unSubscribe = (req, res, next) => {
+    return res.json();
 };
-export const like = (res, req, next) => {
-    return res.json("updated");
+export const like = (req, res, next) => {
+    return res.json();
 };
-export const unLike = (res, req, next) => {
-    return res.json("updated");
+export const unLike = (req, res, next) => {
+    return res.json();
 };
