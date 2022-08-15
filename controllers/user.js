@@ -2,7 +2,7 @@ import { createError } from "../error.js";
 import User from "../models/User.js";
 
 export const update = async (req, res, next) => {
-    console.log(req);
+    console.log(req.body);
     if (req.params.id === req.user.id) {
         try {
             const updateUser = await User.findByIdAndUpdate(
