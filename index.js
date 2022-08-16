@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+
 // importing routes
 import authRoute from "./routes/auth.js";
 import userRoute from "./routes/users.js";
@@ -25,7 +26,6 @@ const connect = () => {
 };
 
 // ROUTES SETUP FUN
-
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/v1/auth", authRoute);
